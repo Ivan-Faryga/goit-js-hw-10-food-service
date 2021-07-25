@@ -26,6 +26,7 @@ refs.input.addEventListener('change', onThemeSwitch);
 //================== колбек с переключением тем====================
 function onThemeSwitch(e) {
   if (!e.target.checked) {
+    // вызываем функцию по смене тем
     toggleTheme(Theme.LIGHT, Theme.DARK);
     return;
   }
@@ -64,8 +65,3 @@ refs.input.checked = localStorage.getItem('theme') === Theme.DARK;
 //     refs.body.classList.add(Theme.LIGHT)
 // })();
 
-// refs.body.classList.add(
-// //   localStorage.getItem('theme') ? localStorage.getItem('theme') : Theme.LIGHT,
-// // );
-// // refs.input.checked = true;
-// // refs.input.checked = localStorage.getItem('theme') === Theme.DARK;
